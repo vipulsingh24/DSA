@@ -16,14 +16,13 @@ offsets = {"up": (-1, 0), "right": (0, 1), "down": (1, 0), "left": (0, -1),
 def is_legal_pos(M, x, y, R, C):
     return ((x >= 0) and (x < R) and
             (y >= 0) and (y < C) and
-            (M[x][y] and M[x][y] != 1))
+            M[x][y] not in [0, 2])
 
 def dfs(M, current_row_idx, current_col_idx, R, C, count):
     print(current_row_idx, current_col_idx, R, C)
     if is_legal_pos(M, current_row_idx, current_col_idx, R, C):
         print("I am inside")
         M[current_row_idx][current_col_idx] = 2
-        print(M)
     
         for direction in offsets.keys():
             offset = offsets[direction]
@@ -43,9 +42,6 @@ def max_land_area(M):
                 count = [1]
                 dfs(M, i, j, max_row, max_col, count)
                 result = max(result, count[0])
-            else:
-                M[i][j] = 2  # Mark Visited node as 2
-                continue
     print(M)
     return result
 

@@ -8,7 +8,7 @@ def add_one_to_numbers(nums):
 
     nums[n-1] += 1
     carry = nums[n-1] / 10
-    a[n-1] = nums[n-1] % 10
+    nums[n-1] = nums[n-1] % 10
 
     for i in range(n-2, -1, -1):
         if carry == 1:

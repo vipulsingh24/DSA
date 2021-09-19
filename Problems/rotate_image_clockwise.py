@@ -32,34 +32,27 @@ class Solution(object):
         
 """
 
-
 class Solution(object):
     def rotate(self, matrix):
         """
         :type matrix: List[List[int]]
         :rtype: None Do not return anything, modify matrix in-place instead.
         """
-        l, r = 0, len(matrix) - 1
-        
-        while l < r:
-            for i in range(r-1):
-                top, bottom = l, r
+        n = len(matrix)
+        for i in range(n):
+            for j in range(i, n):
+                temp = matrix[i][j]
+                matrix[i][j] = matrix[j][i]
+                matrix[j][i] = temp
                 
-                # save the top left
-                temp = matrix[top][l + i]
-                
-                # move left bottom to top left
-                matrix[top][l + i] = matrix[bottom - i][l]
-                
-                # move bottom right to bottom left
-                matrix[bottom-i][l] = matrix[bottom][r-i]
-                
-                # move top right to bottom right
-                matrix[bottom][r-i] = matrix[top+i][r]
-                
-                # move top left to top right
-                matrix[top+i][r] = temp
-                
-            r -= 1
-            l += 1
+        for i in range(n):
+            start = 0
+            end = n - 1
+            
+            while start < end:
+                temp = matrix[i][start]
+                matrix[i][start] = matrix[i][end]
+                matrix[i][end] = temp
+                start += 1
+                end -= 1
         

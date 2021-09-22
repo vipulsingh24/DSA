@@ -36,4 +36,6 @@ def longestChain(words):
             
     result = sorted(ref.items(), key=lambda x: x[1], reverse=True)
     return result[0][1]
+
+
 if __name__ == '__main__':

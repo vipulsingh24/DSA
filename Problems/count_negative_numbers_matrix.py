@@ -10,12 +10,15 @@ We have 4 negative numbers in this matrix
 
 
 def count_neg_numbers(M):
+    """
+     O(n + m) 
+    """
     R = len(M)
     C = len(M[0])
     
     count = 0
     i = 0
-    j = m - 1
+    j = C - 1
 
     while j >= 0 and i < n:
         if M[i][j] < 0:

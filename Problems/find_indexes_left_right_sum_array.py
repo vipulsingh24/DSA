@@ -9,6 +9,7 @@ def find_parity_indexes(arr):
     i = 0
     j = 1
     
+    # Checking the point of partition
     indexes = []
     while j < n:
         right_sum -= arr[j]

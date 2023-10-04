@@ -5,7 +5,7 @@ offsets = {
     "down": (1, 0),
     "up_left": (-1, -1),
     "up_right": (-1, 1),
-    "down_left": (1, -1)
+    "down_left": (1, -1),
     "down_right": (1, 1)
 }
 

@@ -27,6 +27,11 @@ class Solution:
 
 
 if __name__ == "__main__":
-    l1 = [ListNode(2), ListNode(4),ListNode(3)]
-    l2 = [ListNode(5), ListNode(6), ListNode(4)]
-    print(Solution().addTwoNumbers(l1, l2))
+    list_1 = ListNode(2)
+    list_1.next = ListNode(4)
+    list_1.next.next = ListNode(3)
+
+    list_2 = ListNode(5)
+    list_2.next = ListNode(6)
+    list_2.next.next = ListNode(4)
+    print(Solution().addTwoNumbers(list_1, list_2))

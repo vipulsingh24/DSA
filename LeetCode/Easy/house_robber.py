@@ -26,3 +26,8 @@ class Solution:
             rob1 = rob2
             rob2 = temp
         return rob2
+    
+
+# temp   2 7+0,2 9+2,7 3+7,11 1+11,10
+# rob1 0 0 2     7     11      10
+# rob2 0 2 7     11    10      12

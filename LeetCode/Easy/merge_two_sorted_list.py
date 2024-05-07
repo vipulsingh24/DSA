@@ -38,6 +38,7 @@ class Solution:
                 print("l2 greater than l1")
                 tail.next = l2
                 l2 = l2.next
+            print("tail: ", tail.val)
             tail = tail.next
 
         

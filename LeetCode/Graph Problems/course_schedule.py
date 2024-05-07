@@ -1,5 +1,6 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        # build adjancency list of prerequisites
         preMap = {i: [] for i in range(numCourses)}
         for course, pre in prerequisites:
             preMap[course].append(pre)
@@ -24,4 +25,4 @@ class Solution:
             if not dfs(crs):
                 return False
         
-        return True
+        return True 

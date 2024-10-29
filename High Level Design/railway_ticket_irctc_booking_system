@@ -1,0 +1,12 @@
+Functional Requriements:
+1. Search of trains / List of schedule trains for a given day from source A to destination B
+2. Check availability and book a seat - single/multiple (if available) for a given train
+3. Quota booking (General & Tatkal) - General 4 month advance booking
+4. Multiple people in parallel request for a seat booking (atomicity gurantee)
+5. Cancellation
+
+
+Services:
+1. Train Services 
+    - Admin can add train, it's route, timing, coaches, total seats
+    - 

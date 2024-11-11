@@ -1,0 +1,1 @@
+// Based on  a input there a 4 monetisation platform the program should platform can be ad platform, subscription platform, inapp purchase and affiliated platform. Based on product determine platform given any product name
